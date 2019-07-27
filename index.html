@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+    <title>My Popup Modal</title>
+</head>
+
+<body>
+
+    <div class="main-contact">
+        <h2>Simple modal box example click to see the magic</h2>
+        <button class="btn" onclick="togglePopup()">Pop up!</button>
+    </div>
+
+
+    <div class="z-modal" id="myModal">
+        <div class="z-modal_overlay"></div>
+        <div class="z-modal_content">
+            <h2 class="z-modal_heading">Simple Model</h2>
+
+            <div class="z-modal_text">
+                <img src="https://i.harperapps.com/covers/9780007259762/x510.jpg" class="z-modal_bookcover" alt="book">
+                <div class="z-modal_bookinfo">
+                    <h4 class="z-modal_booktitle">Book title</h4>
+                    <div class="z-modal_bookdescription">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laborum quaerat esse incidunt
+                        omnis vero nihil, non a placeat. Provident, eveniet fuga libero eos eligendi, quisquam minus cum
+                        qui recusandae id rem dolorum, quas sequi minima repellat aut quaerat inventore. Reprehenderit
+                        tenetur voluptates adipisci repellat aliquid velit sunt fugit tempore!
+                    </div>
+                </div>
+            </div>
+
+            <form class="z-modal_form">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email your email">
+                <button type="submit">Send</button>
+            </form>
+            <button class="z-modal_close" onclick="togglePopup()">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                    id="Layer_1" x="0px" y="0px" viewBox="0 0 22.6 22.6" style="height: 1em; width: 1em;"
+                    xml:space="preserve" preserveAspectRatio="none">
+                    <rect fill="currentColor" x="8.3" y="-1.7"
+                        transform="matrix(0.7071 0.7071 -0.7071 0.7071 11.3137 -4.6863)" width="6" height="26"></rect>
+                    <rect fill="currentColor" x="8.3" y="-1.7"
+                        transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 27.3137 11.3137)" width="6" height="26"></rect>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function togglePopup() {
+            var modal = document.getElementById('myModal');
+            if (modal.style.display == 'block') {
+                modal.style.display = 'none';
+            } else {
+                modal.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

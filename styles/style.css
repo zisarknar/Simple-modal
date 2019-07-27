@@ -1,0 +1,197 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-contact .btn {
+  border: none;
+  margin: 50px 0 0 0;
+  width: 150px;
+  border-radius: 5px;
+  height: 50px;
+  color: white;
+  background-color: sandybrown;
+  font-weight: 500;
+  font-size: 16px;
+  -webkit-animation: drop 1.5s ease;
+          animation: drop 1.5s ease;
+  cursor: pointer;
+}
+
+.z-modal {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Open Sans', sans-serif;
+  z-index: 100;
+  opacity: 1;
+  display: none;
+}
+
+.z-modal .z-modal_overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  z-index: 110;
+  opacity: 0.7;
+}
+
+.z-modal .z-modal_content {
+  z-index: 120;
+  background: #414141;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  min-width: 645px;
+  max-width: 700px;
+  padding: 1.859em;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0px 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.z-modal .z-modal_content .z-modal_heading {
+  line-height: 1.5;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 auto 32px;
+}
+
+.z-modal .z-modal_content .z-modal_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.z-modal .z-modal_content .z-modal_text .z-modal_bookcover {
+  max-width: 160px;
+  width: 100%;
+}
+
+.z-modal .z-modal_content .z-modal_text .z-modal_bookinfo {
+  padding: 0 0 0 32px;
+}
+
+.z-modal .z-modal_content .z-modal_text .z-modal_bookinfo .z-modal_booktitle {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.z-modal .z-modal_content .z-modal_text .z-modal_bookinfo .z-modal_bookdescription {
+  direction: ltr;
+  margin: 0;
+}
+
+.z-modal .z-modal_content .z-modal_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 30px 0 0;
+}
+
+.z-modal .z-modal_content .z-modal_form input {
+  font-family: inherit;
+  background-color: white;
+  -webkit-box-shadow: 1px solid #dcdcdc;
+          box-shadow: 1px solid #dcdcdc;
+  font-size: 1em;
+  margin: 0 8px 0 0;
+  height: 3em;
+  padding: .75em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  border: none;
+  color: #262626;
+}
+
+.z-modal .z-modal_content .z-modal_form button {
+  background: sandybrown;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  border: none;
+  padding: .5rem;
+  position: relative;
+  min-width: 100px;
+  font-weight: 600;
+}
+
+.z-modal .z-modal_content .z-modal_close {
+  z-index: 130;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600px;
+  opacity: 0.6;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+}
+
+@-webkit-keyframes drop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+/*# sourceMappingURL=style.css.map */

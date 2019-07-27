@@ -1,0 +1,164 @@
+@import 'variables';
+
+@mixin fullPage {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.main-contact {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    .btn {
+        border: none;
+        margin: 50px 0 0 0;
+        width: 150px;
+        border-radius: 5px;
+        height: 50px;
+        color: white;
+        background-color: $btnColor;
+        font-weight: 500;
+        font-size: 16px;
+        animation: drop 1.5s ease;
+        cursor: pointer;
+    }
+}
+
+.z-modal {
+    @include fullPage();
+    font-family: 'Open Sans', sans-serif;
+    z-index: 100;
+    opacity: 1;
+    display: none;
+
+    .z-modal_overlay {
+        @include fullPage();
+        background: black;
+        z-index: 110;
+        opacity: 0.7;
+    }
+
+    .z-modal_content {
+        z-index: 120;
+        background: $modalBg;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: white;
+        min-width: 645px;
+        max-width: 700px;
+        padding: 1.859em;
+        transform: translate(-50%, -50%);
+        box-shadow: 0px 0 10px rgba(0, 0, 0, 0.4);
+
+        .z-modal_heading {
+            line-height: 1.5;
+            text-align: center;
+            font-size: 2rem;
+            margin: 0 auto 32px;
+        }
+
+        .z-modal_text {
+            display: flex;
+            align-items: flex-start;
+
+            .z-modal_bookcover {
+                max-width: 160px;
+                width: 100%;
+            }
+
+            .z-modal_bookinfo {
+                padding: 0 0 0 32px;
+
+                .z-modal_booktitle {
+                    font-size: 20px;
+                    line-height: 1.5;
+                    font-weight: 600;
+                    margin: 0 0 4px;
+                }
+
+                .z-modal_bookdescription {
+                    direction: ltr;
+                    margin: 0;
+                }
+
+            }
+        }
+
+        .z-modal_form {
+            display: flex;
+            flex-direction: row;
+            margin: 30px 0 0;
+
+            input {
+                font-family: inherit;
+                background-color: white;
+                box-shadow: 1px solid $boxShadowColor;
+                font-size: 1em;
+                margin: 0 8px 0 0;
+                height: 3em;
+                padding: .75em;
+                box-sizing: border-box;
+                width: 100%;
+                border: none;
+                color: #262626;
+            }
+
+            button {
+                background: $btnColor;
+                color: white;
+                font-size: 1rem;
+                line-height: 1.5;
+                margin: 0;
+                border: none;
+                padding: .5rem;
+                position: relative;
+                min-width: 100px;
+                font-weight: 600;
+            }
+        }
+
+        .z-modal_close {
+            z-index: 130;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600px;
+            opacity: 0.6;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            margin: 0px;
+            padding: 0px;
+            color: white;
+        }
+    }
+
+}
+
+
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
